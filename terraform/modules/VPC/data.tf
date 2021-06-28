@@ -4,9 +4,9 @@
 
 
 data "aws_vpc" "default" {
-  id = "vpc-085cb175"
+  default = true
 }
 
 data "aws_subnet" "public" {
-    id = "subnet-5afc2105"
+  id = "subnet-5afc2105"
 }

@@ -11,12 +11,12 @@ resource "aws_iam_role" "database_handler_role" {
 }
 
 resource "aws_iam_policy" "database_handler_policy" {
-    name        = "database-handler-policy"
-    description = ""
-    policy = file("${path.module}/policies/allow_dynamo_operation.json")
+  name        = "database-handler-policy"
+  description = ""
+  policy      = file("${path.module}/policies/allow_dynamo_operation.json")
 }
 
 resource "aws_iam_role_policy_attachment" "database_handler_attach" {
-    role       = "${aws_iam_role.database_handler_role.name}"
-    policy_arn = "${aws_iam_policy.database_handler_policy.arn}"
+  role       = aws_iam_role.database_handler_role.name
+  policy_arn = aws_iam_policy.database_handler_policy.arn
 }
