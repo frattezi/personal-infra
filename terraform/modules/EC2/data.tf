@@ -3,11 +3,9 @@
 ################
 
 data "aws_ami" "ubuntu" {
-  most_recent = true
-
   filter {
     name   = "image-id"
-    values = ["ami-04b61997e51f6d5c7"]
+    values = ["ami-09e67e426f25ce0d7"]
   }
 
   filter {
