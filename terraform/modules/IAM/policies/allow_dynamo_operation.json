@@ -1,0 +1,10 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": ["dynamodb:Get", "dynamodb:Put"],
+      "Effect": "Allow",
+      "Resource": "arn:aws:dynamodb:eu-west-1:ACCOUNT_ID:table/example-client-db"
+    }
+  ]
+}
