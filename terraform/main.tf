@@ -26,11 +26,19 @@ module "ec2_instace" {
 
   default_vpc      = module.vpc.default_vpc_id
   public_subnet_id = module.vpc.subnet_public
+  ec2_public_key   = var.ec2_public_key
 }
 
 module "dynamoDB" {
   source = "./modules/DynamoDB"
 
+}
+
+module "rds_backend" {
+  source = "./modules/RDS"
+
+  database_pass     = var.database_pass
+  database_username = var.database_username
 }
 
 module "lambda_dynamo_user" {
