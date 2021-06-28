@@ -1,3 +1,3 @@
 variable "subnet_id" {
-  value = string
+  type = string
 }
