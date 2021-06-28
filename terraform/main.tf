@@ -17,6 +17,8 @@ module "IAM" {
 
 module "vpc" {
   source = "./modules/VPC"
+
+  subnet_id = var.subnet_id
 }
 
 module "ec2_instace" {

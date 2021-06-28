@@ -8,5 +8,5 @@ data "aws_vpc" "default" {
 }
 
 data "aws_subnet" "public" {
-  id = "subnet-5afc2105"
+  id = var.subnet_id
 }
